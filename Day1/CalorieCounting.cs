@@ -13,7 +13,7 @@ namespace AoC.Day1
 
         private static int GetPartOneAnswer()
         {
-            int tempSum = 0;
+            int oneElfSum = 0;
             int elfTop = 0;
 
             for (int i = 0; i < Input.Length; i++)
@@ -22,15 +22,15 @@ namespace AoC.Day1
                 {
                     int calories = Int32.Parse(Input[i]);
 
-                    tempSum += calories;
-                    if(tempSum > elfTop)
+                    oneElfSum += calories;
+                    if(oneElfSum > elfTop)
                     {
-                        elfTop = tempSum;
+                        elfTop = oneElfSum;
                     }
                 }
                 catch (FormatException)
                 {
-                    tempSum = 0;
+                    oneElfSum = 0;
                 }
             }
 
@@ -39,8 +39,8 @@ namespace AoC.Day1
 
         private static int GetPartTwoAnswer()
         {
-            int tempSum = 0;
-            List<int> Calories = new List<int>();
+            int oneElfSum = 0;
+            List<int> caloriesList = new List<int>();
 
             for (int i = 0; i < Input.Length; i++)
             {
@@ -48,24 +48,24 @@ namespace AoC.Day1
                 {
                     int calories = Int32.Parse(Input[i]);
 
-                    tempSum += calories;
-                    Calories.Add(tempSum);
+                    oneElfSum += calories;
+                    caloriesList.Add(oneElfSum);
                 }
                 catch (FormatException)
                 {
-                    tempSum = 0;
+                    oneElfSum = 0;
                 }
             }
 
-            var orderedCalories = Calories.OrderByDescending(c => c).ToList();
+            var orderedCalories = caloriesList.OrderByDescending(c => c).ToList();
 
-            int total = 0;
+            int topThreeSum = 0;
             for(int i = 0; i < 3; i++)
             {
-                total += orderedCalories[i];
+                topThreeSum += orderedCalories[i];
             }
 
-            return total;
+            return topThreeSum;
         }
 
         public static string GetPrompt()
