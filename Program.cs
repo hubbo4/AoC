@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using AoC.Day1;
+
+//Day 1: Calorie Counting
+Console.WriteLine(CalorieCounting.GetPrompt());
+
