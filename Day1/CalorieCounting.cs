@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AoC.Day1
+﻿namespace AoC.Day1
 {
     public class CalorieCounting
     {
@@ -68,9 +61,9 @@ namespace AoC.Day1
             return topThreeSum;
         }
 
-        public static string GetPrompt()
+        public static void GetPrompt()
         {
-            return $"Part 1: {GetPartOneAnswer()}\nPart 2: {GetPartTwoAnswer()}";
+            Console.WriteLine($"Day 1 => Part 1: {GetPartOneAnswer()}, Part 2: {GetPartTwoAnswer()}");
         }
     }
 }
