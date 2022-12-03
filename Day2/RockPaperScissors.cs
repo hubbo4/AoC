@@ -5,6 +5,7 @@
         public static string[] Input { get; set; } = System.IO.File.ReadAllLines(@"D:\AoC\Day2\RockPaperScissors.txt");
         public static IDictionary<string,string>? GameDictionary { get; set; }
         public static IDictionary<string, int>? PointsDictionary { get; set; }
+
         private static int GetPartOneAnswer()
         {
             string[][] games = new string[Input.Length][];
@@ -87,6 +88,7 @@
             GameDictionary.Add("Y", "paper");
             GameDictionary.Add("Z", "scissors");
         }
+
         private static void InitializeDictionaryPartTwo()
         {
             PointsDictionary = new Dictionary<string, int>();
@@ -101,6 +103,7 @@
             PointsDictionary.Add("C Y", 6);
             PointsDictionary.Add("C Z", 7);
         }
+
         public static void GetPrompt()
         {
             Console.WriteLine($"Day 2 => Part 1: {GetPartOneAnswer()}, Part 2: {GetPartTwoAnswer()}");
