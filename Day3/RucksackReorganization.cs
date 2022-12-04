@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AoC.Day3
+﻿namespace AoC.Day3
 {
     public class RucksackReorganization
     {
@@ -87,6 +79,7 @@ namespace AoC.Day3
 
             return prioritiesSum;
         }
+
         private static void InitializePriorities()
         {
             int lowercasePriority = 1;
